@@ -31,9 +31,9 @@ flowRate = feedRate * 7.5
 
 print
 print 'Based in this weigh, these are the current values of the breeding:'
-print 'The feeding rate in this stage is: ', feedRate, 'lbs per day;'
-print 'The tank should be of, at least: ', tSize, 'gallons;'
-print 'The filter should have at least: ', bVolume, 'ftˆ3 of beads;'
-print 'The recirculation flow should be of: ', flowRate, 'gpm.'
+print 'The feeding rate in this stage is: {: .2f}lbs per day;'.format(feedRate)
+print 'The tank should be of, at least: {: .2f} gallons;'.format(tSize)
+print 'The filter should have at least: {: .2f}ftˆ3 of beads;'.format(bVolume)
+print 'The recirculation flow should be of: {: .2f}gpm.'.format(flowRate)
 print
 print 'All these numbers have a safety factor and are calculated for a tank equiped with a bead filter.'
