@@ -30,10 +30,14 @@ flowRate = feedRate * 1698
 # 6. Apresenta os resultados de uma maneira que o usuário pode identificar facilmente.
 
 print
-print 'A partir do peso digitado, estes são os valores atuais recomendados para a criação:'
+print 'A partir do peso digitado,',
+print 'estes são os valores atuais recomendados para a criação:'
+print
 print 'A taxa de alimentação nesse estágio é de: {: .2f}g por dia;'.format(feedRate)
 print 'O tanque deve ter pelo menos: {: .2f} litros;'.format(tSize)
 print 'O filtro deve ter pelo menos: {: .4f}mˆ3 de mídia flutuante;'.format(bVolume)
 print 'A circulação de água deve ser de: {: .2f} L/H.'.format(flowRate)
 print
-print 'Todos os valores tem um fator de segurança e são calculados para um tanque equipado com um filtro com mídia flutuante.'
+print 'Todos os valores tem um fator de segurança',
+print 'e são calculados para um tanque equipado com um filtro com mídia flutuante.'
+print
