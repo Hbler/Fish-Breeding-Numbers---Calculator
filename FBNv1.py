@@ -4,8 +4,6 @@
 # Calculates safe values for the breeding of fish
 # in tanks equipped with bead filters.
 
-# Request weigh of fish in the tank.
-
 fWeight = float(raw_input (
 	'Enter the weigh of fish in the tank in Lbs (pounds): '))
 
