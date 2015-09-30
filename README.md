@@ -1,6 +1,6 @@
 # Fish_farm
 
-Future application for fishe breeders
+Future application for fish breeders
 
 For now, it calculates safe values for the breeding of fish in tanks equipped with bead filters.
 
