@@ -1,0 +1,49 @@
+# -*- coding: utf-8 -*-
+# Estado do Sistema de Criação de Peixes
+
+# Calcula valores seguros para a criação de peixes
+# em tanques equipados com filtros de mídia flutuante.
+
+def statusCalculatorKg(mass):
+	'''Calculates the breeding system current status
+	based in the mass (kilos) entered.'''
+
+	feedRate = mass * 0.015
+	tSize = feedRate * 757 # tamanho do tanque.
+	bVolume = feedRate * 0.018 # volume necessários de "beads" no filtro.
+	flowRate = feedRate * 1698 # circulação adequada.
+	# Resultados
+	print '\nA partir do peso digitado,',
+	print 'estes são os valores atuais recomendados para a criação:'
+	print '''
+	A taxa de alimentação nesse estágio é de: {: .2f}g por dia;
+	O tanque deve ter pelo menos: {: .2f} litros;
+	O filtro deve ter pelo menos: {: .4f}mˆ3 de mídia flutuante;
+	A circulação de água deve ser de: {: .2f} L/H.
+	'''.format(feedRate, tSize, bVolume, flowRate)
+	print 'Todos os valores tem um fator de segurança.'
+	print 'E são calculados para um tanque equipado',
+	print 'com um filtro de mídias flutuantes.\n'
+
+def valid_mass_ptBR(u_input):
+	'''Tests if the user input can be converted to float.'''
+
+	try:
+		float(u_input)
+		return True
+	except ValueError:
+		print 'Valor Inválido. Tente novamente.'
+		return False
+
+def get_mass_ptBR():
+	'''Gets the input of the user and tests it.'''
+
+	while True:
+		fWeight = raw_input (
+			'Digite o peso total de peixes no tanque em Kg (quilos): ')
+		if valid_mass_ptBR(fWeight):
+			print 'Calculando...'
+			break
+	return fWeight
+
+statusCalculatorKg(float(get_mass_ptBR()))
